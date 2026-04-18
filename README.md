@@ -30,3 +30,14 @@ Validates that:
 
 Purpose:
 Test negative scenarios that directly impact user experience and system reliability.
+
+
+### Testing approach
+
+Automation examples in this repository are intentionally simple and documented step by step.
+Each test reflects a real manual QA flow, with comments explaining:
+- the testing intent
+- the user behavior being validated
+- the risk covered by each scenario
+
+The focus is on clarity, stability, and understanding of user-facing behavior rather than complex automation patterns.
