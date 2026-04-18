@@ -1,39 +1,32 @@
-# Playwright – Manual QA Support Project
-
-This repository contains a small Playwright project created to support **manual QA activities**, not to build a full automation framework.
-
-## Purpose
-
-The goal of this project is to demonstrate how a Manual QA Engineer can use Playwright to:
-- automate **stable regression checks**
-- validate **critical user flows**
-- support exploratory and manual testing with reliable, repeatable checks
-
-Automation here is used as a **support tool**, not as a replacement for manual QA.
-
-## What is covered
-
-- End-to-end UI tests using Playwright
-- Focus on **robust assertions** and real application behavior
-- Cross-browser execution (Chromium, Firefox, WebKit)
-
 ## Implemented tests
 
 ### 1. Homepage content validation
 Validates that:
-- Wikipedia homepage loads correctly
-- The main page heading is displayed
-- A stable, user-visible welcome message is present
+- The homepage loads correctly
+- Core page content is displayed
+- Stable, user-visible elements are present
+
+Purpose:
+Ensure basic application availability and correct rendering of primary content.
+
+---
 
 ### 2. Navigation flow validation
 Validates that:
-- A user can navigate from the homepage to the “About Wikipedia” page
+- A user can navigate between pages using primary links
 - Redirects are handled correctly
-- Page content is verified using **robust, non-fragile assertions**
+- Target page content matches expected behavior
 
-## How to run tests
+Purpose:
+Verify end-to-end navigation flows and prevent broken user journeys.
 
-```bash
-npm install
-npx playwright test
-``
+---
+
+### 3. Negative login scenario – error handling
+Validates that:
+- Invalid credentials are rejected
+- Clear error feedback is displayed to the user
+- Authentication error handling behaves as expected
+
+Purpose:
+Test negative scenarios that directly impact user experience and system reliability.
